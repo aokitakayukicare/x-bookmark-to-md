@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x-bookmark-to-md</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <p class="description">Export your X bookmarks in Markdown format.</p>
+        </div>
+        
+        <div class="content">
+            <div class="status" id="status">
+                <div class="status-icon warning" id="statusIcon">⚠</div>
+                <p id="statusText">Please open the X bookmarks page</p>
+            </div>
+            
+            <div class="actions">
+                <button id="openBookmarksBtn" class="btn btn-primary">
+                    Open Bookmarks Page
+                </button>
+                
+                <button id="exportBtn" class="btn btn-secondary" disabled>
+                    Export Bookmarks
+                </button>
+            </div>
+            
+            <div class="progress" id="progress" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Processing...</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>v1.0</p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
+
